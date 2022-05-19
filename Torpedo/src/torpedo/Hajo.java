@@ -6,17 +6,22 @@ import java.util.Scanner;
 public class Hajo {
    private static int[] pozicio = new int[3];
    private static int lovesDb = 0;
+   private static int talalt = 0;
      
    public static String talalat(int poz){
-       for (int i = 0; i < pozicio.length; i++) {
-           if(Loves() == pozicio[i]){
-               System.out.println("talált");
-            }else{
-               System.out.println("Nem talált");
-           }
-       }
-    lovesDb++;
-    return null;
+       do{
+       Loves();
+        for (int i = 0; i < pozicio.length; i++) {
+            if(Loves() == pozicio[i]){
+                System.out.println("talált");
+                talalt++;
+             }else{
+                System.out.println("Nem talált");
+            }
+        }
+       lovesDb++;
+       }while(talalt == 3);
+    
 }
    public Hajo(int [] pozicio){
        int helyzet = (int)(Math.random())*5;
