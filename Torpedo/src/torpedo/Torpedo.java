@@ -5,11 +5,7 @@ public class Torpedo {
         
     }
 
-    public static String tesztLoves(int poz) {
-        
-        return null;
-        
-    }
+    
     
     
 }
